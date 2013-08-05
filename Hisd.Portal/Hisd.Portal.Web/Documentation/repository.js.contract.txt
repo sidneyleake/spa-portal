@@ -1,0 +1,12 @@
+Generic Repository Contract
+
+getById(id);
+getAll();
+getSome(predicate);
+
+create(entity);
+
+update(entity);
+
+deleteById(id);
+deleteEntity(entity);
