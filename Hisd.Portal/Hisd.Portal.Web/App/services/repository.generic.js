@@ -51,4 +51,14 @@
 
         return genericRepository;
     })();
+
+    var genericRepository = {
+        create: create
+    };
+
+    return genericRepository;
+
+    function create(manager, entityTypeName, resourceName) {
+        return new GenericRepository(manager, entityTypeName, resourceName);
+    }
 });

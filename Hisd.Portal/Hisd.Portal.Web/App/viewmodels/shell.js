@@ -1,5 +1,5 @@
-﻿define(['durandal/system', 'durandal/plugins/router', 'services/logger'],
-    function (system, router, logger) {
+﻿define(['durandal/system', 'durandal/plugins/router', 'services/logger', 'config'],
+    function (system, router, logger, config) {
         var shell = {
             activate: activate,
             router: router
@@ -13,10 +13,11 @@
         }
 
         function boot() {
+            config.initialize();
             router.mapNav('home');
             router.mapNav('details');
-            log('Hot Towel SPA Loaded!', null, true);
-            return router.activate('home');
+            log('Hisd Portal!', null, true);
+            return router.activate(config.startModule);
         }
 
         function log(msg, data, showToast) {

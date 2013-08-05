@@ -1,3 +1,13 @@
 ﻿<section>
     <h2 class="page-title" data-bind="text: title"></h2>
+    <h3>Apps</h3>
+        <span style="width: 100px; display:inline-block;">Id</span>
+        <span style="width: 100px; display:inline-block;">Name</span>
+        <span style="width: 100px; display:inline-block;">Description</span>
+    <div data-bind="foreach: apps">
+        <span style="width: 100px; display:inline-block;" data-bind="text: id" />
+        <span style="width: 100px; display:inline-block;" data-bind="text: name" />
+        <span style="width: 200px; display:inline-block;" data-bind="text: description" />
+        <br />
+    </div>
 </section>
